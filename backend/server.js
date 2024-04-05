@@ -23,9 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/users", (req, res) => {
-  console.log("🚀 - res:", res.data);
   db.query("select * from users", (err, data) => {
-    console.log(err, data);
     if (err) {
       console.log(err);
     } else {
