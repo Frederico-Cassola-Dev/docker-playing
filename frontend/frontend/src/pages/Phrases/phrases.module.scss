@@ -1,0 +1,139 @@
+@import "../../scss/variables";
+
+.phrases {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 9.5rem);
+  font-family: $primary-font;
+  font-size: $font-size-l;
+
+  .inputsContainer {
+    display: flex;
+    margin-top: $space-l;
+
+    .inputSearchCategory {
+      width: 45%;
+      height: $space-m;
+      padding-left: $space-2xs;
+      font-weight: $font-weight-bold;
+      border-radius: $border-radius-s;
+
+      &:focus {
+        outline: 2px solid $border-color-active;
+      }
+    }
+
+    .showInputSearchEvent {
+      position: relative;
+      z-index: 11000;
+    }
+
+    select {
+      width: 45%;
+      height: $space-m + 3px;
+      margin-left: $space-m;
+      padding-left: $space-2xs;
+      font-weight: $font-weight-bold;
+      border-radius: $border-radius-s;
+
+      &:focus {
+        outline: 2px solid $border-color-active;
+      }
+    }
+  }
+
+  .lifeEventContainer {
+    width: 90%;
+    margin-top: $space-xl;
+    font-family: $secondary-font;
+    font-size: $font-size-4xl;
+    text-align: center;
+  }
+
+  .visionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: $space-s;
+
+    .visionPhrase {
+      margin-top: $space-m;
+      font-size: $font-size-3xl;
+      text-align: center;
+      width: 90vw;
+    }
+
+    .reactionsAndAuthorContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $space-s;
+
+      .author {
+        padding-right: $space-xl;
+      }
+
+      .totalLikes {
+        width: $space-m;
+        padding-bottom: $space-2xs;
+        font-weight: $font-weight-bold;
+        color: $color-primary-active;
+      }
+
+      .likeButton {
+        color: red;
+        border: none;
+      }
+
+      .favoriteButton {
+        color: orange;
+        border: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 700px) {
+  .phrases {
+    height: calc(100vh - 12.1rem);
+    .inputsContainer {
+      display: flex;
+
+      .inputSearchCategory {
+        width: 65%;
+        height: $space-l;
+        font-size: $space-m;
+      }
+
+      select {
+        width: 65%;
+        height: $space-l + 3px;
+        font-size: $space-m;
+      }
+    }
+
+    .lifeEventContainer {
+      font-size: $font-size-7xl;
+    }
+
+    .visionsContainer {
+      .visionPhrase {
+        font-size: $font-size-5xl;
+      }
+
+      .reactionsAndAuthorContainer {
+        .author {
+          font-size: $font-size-3xl;
+        }
+
+        .totalLikes {
+          font-size: $font-size-4xl;
+        }
+      }
+    }
+  }
+}
